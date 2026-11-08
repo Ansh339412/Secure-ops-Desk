@@ -1,0 +1,2 @@
+-- Intentionally empty: SecureOps Desk starts with no data.
+-- To load clearly-labelled sample data for screenshots, see supabase/demo-data.sql.

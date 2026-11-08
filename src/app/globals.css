@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-mist font-sans text-ink antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.harbor.DEFAULT');
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-harbor text-white hover:bg-harbor-dark;
+  }
+  .btn-secondary {
+    @apply border border-rule bg-white text-ink hover:bg-mist;
+  }
+  .btn-danger {
+    @apply border border-red-300 bg-white text-sev-critical hover:bg-red-50;
+  }
+  .input {
+    @apply w-full rounded-md border border-rule bg-white px-3 py-2 text-sm text-ink placeholder:text-ink-faint focus:border-harbor disabled:bg-mist disabled:text-ink-soft;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink;
+  }
+  .panel {
+    @apply rounded-lg border border-rule bg-white;
+  }
+  .data-table {
+    @apply w-full text-left text-sm;
+  }
+  .data-table th {
+    @apply border-b border-rule px-4 py-2.5 font-medium text-ink-soft;
+  }
+  .data-table td {
+    @apply border-b border-rule px-4 py-3 align-top;
+  }
+  .data-table tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .alert-error {
+    @apply mb-4 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-sev-critical;
+  }
+  .alert-ok {
+    @apply mb-4 rounded-md border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-800;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
