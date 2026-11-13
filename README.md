@@ -2,7 +2,7 @@
 
 Security operations and IT asset management for small organizations. Register assets, record vulnerabilities, report and investigate incidents, and see what to fix first, with every organization's data isolated at the database level.
 
-> **Screenshots:** add your own to `public/screenshots/` after you run the app (see _Demo data_ below) and link them here. None are included because they should show your running deployment.
+> **Screenshots:** 
 
 ## The problem
 
